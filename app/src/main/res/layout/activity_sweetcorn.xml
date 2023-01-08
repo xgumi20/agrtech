@@ -1,0 +1,1665 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:app="http://schemas.android.com/apk/res-auto"
+xmlns:tools="http://schemas.android.com/tools"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+android:background="@color/sweetcorn"
+    android:paddingBottom="15dp"
+tools:context=".SWEETCORN">
+
+<com.google.android.material.floatingactionbutton.FloatingActionButton
+    android:id="@+id/fab1"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_gravity="bottom|end"
+    android:layout_margin="40dp"
+    android:src="@mipmap/ic_icon_bulb"
+    app:fabSize="normal"
+    tools:ignore="MissingClass"
+    android:backgroundTint="@color/purple_500"
+    app:tint="@color/white"/>
+
+<com.google.android.material.floatingactionbutton.FloatingActionButton
+    android:id="@+id/plantCal"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_gravity="bottom|end"
+    android:layout_marginEnd="40dp"
+    android:layout_marginBottom="120dp"
+    android:src="@mipmap/ic_baseline_calculate_24"
+    android:visibility="invisible"
+    app:fabSize="normal"
+    android:backgroundTint="@color/purple_500"
+    app:tint="@color/white"/>
+
+
+<ScrollView
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp">
+
+            <ImageView
+
+                android:layout_width="match_parent"
+                android:layout_height="220dp"
+                android:layout_marginRight="-94dp"
+
+                android:src="@mipmap/sweetcorncircle" />
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="150dp"
+                android:background="@mipmap/box"
+                android:orientation="vertical"
+                android:padding="24sp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Sweetcorn"
+                    android:textSize="28sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="Rambutans are rich in vitamin C, which is a potent antioxidant. Consuming antioxidants helps fight off free radicals, which are waste products in your body that can damage your cells. Antioxidants have been shown to reduce cellular damage and potentially reduce the risk of cancer in many individuals."
+                    android:textSize="18sp" />
+            </LinearLayout>
+        </RelativeLayout>
+
+
+
+        <!--  Divider  -->
+
+
+        <!--Seedling clickablecard-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#FFFFFF"
+            android:onClick="expandSeedlings"
+            android:elevation="10dp"
+            android:orientation="horizontal"
+            android:padding="10dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="10dp"
+                android:text="@string/Seedlingsproduction"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="end">
+
+                <ImageView
+                    android:id="@+id/flipArrow1"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_marginEnd="10dp"
+                    android:src="@mipmap/ic_baseline_arrow_drop_down_24" />
+            </LinearLayout>
+        </LinearLayout>
+        <!--Gone Layout-->
+
+        <LinearLayout
+            android:visibility="gone"
+            android:id="@+id/details1gone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:background="#FFFFFF"
+            android:orientation="vertical"
+            >
+
+
+            <GridLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:columnCount="3"
+                android:rowCount="2"
+                android:padding="20dp">
+
+                <androidx.cardview.widget.CardView
+                    android:onClick="plantSpacing"
+                    android:layout_width="wrap_content"
+                    android:layout_height="120dp"
+                    android:layout_row="0"
+                    android:layout_column="0"
+                    android:layout_columnWeight="1"
+                    android:layout_margin="5dp"
+                    app:cardCornerRadius="2dp"
+                    app:cardElevation="10dp"
+                    app:cardBackgroundColor="@color/sweetcorn">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal|center_vertical"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:layout_width="80dp"
+                            android:layout_height="80dp"
+                            android:src="@mipmap/plantspacingicon"></ImageView>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="0.3m"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/seedlingsText"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:onClick="rowSpacing"
+                    android:layout_width="wrap_content"
+                    android:layout_height="120dp"
+                    android:layout_row="0"
+                    android:layout_column="1"
+                    android:layout_columnWeight="1"
+                    android:layout_margin="5dp"
+                    app:cardCornerRadius="2dp"
+                    app:cardElevation="10dp"
+                    app:cardBackgroundColor="@color/sweetcorn">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal|center_vertical"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:layout_width="80dp"
+                            android:layout_height="80dp"
+                            android:src="@mipmap/row"></ImageView>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="0.5m"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/seedlingsText"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:onClick="seedDepth"
+                    android:layout_width="wrap_content"
+                    android:layout_height="120dp"
+                    android:layout_row="0"
+                    android:layout_column="2"
+                    android:layout_columnWeight="1"
+                    android:layout_margin="5dp"
+                    app:cardCornerRadius="2dp"
+                    app:cardElevation="10dp"
+                    app:cardBackgroundColor="@color/sweetcorn">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal|center_vertical"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:layout_width="80dp"
+                            android:layout_height="80dp"
+                            android:src="@mipmap/seedepth"></ImageView>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="5 - 8 cm"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/seedlingsText"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:onClick="sprout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="120dp"
+                    android:layout_row="1"
+                    android:layout_column="0"
+                    android:layout_columnWeight="1"
+                    android:layout_margin="5dp"
+                    app:cardCornerRadius="2dp"
+                    app:cardElevation="10dp"
+                    app:cardBackgroundColor="@color/sweetcorn">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal|center_vertical"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:layout_width="80dp"
+                            android:layout_height="80dp"
+                            android:src="@mipmap/sprout"></ImageView>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="7 Day's"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/seedlingsText"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:onClick="hardening"
+                    android:layout_width="wrap_content"
+                    android:layout_height="120dp"
+                    android:layout_row="1"
+                    android:layout_column="1"
+                    android:layout_columnWeight="1"
+                    android:layout_margin="5dp"
+                    app:cardCornerRadius="2dp"
+                    app:cardElevation="10dp"
+                    app:cardBackgroundColor="@color/sweetcorn">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal|center_vertical"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:layout_width="80dp"
+                            android:layout_height="80dp"
+                            android:src="@mipmap/hardening"></ImageView>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Not necessarily"
+                            android:textColor="@color/black"
+                            android:textSize="12sp"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:onClick="transplanting"
+                    android:layout_width="wrap_content"
+                    android:layout_height="120dp"
+                    android:layout_row="1"
+                    android:layout_column="2"
+                    android:layout_columnWeight="1"
+                    android:layout_margin="5dp"
+                    app:cardCornerRadius="2dp"
+                    app:cardElevation="10dp"
+                    app:cardBackgroundColor="@color/sweetcorn">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal|center_vertical"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:layout_width="80dp"
+                            android:layout_height="80dp"
+                            android:src="@mipmap/transplant"></ImageView>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Not necessarily"
+                            android:textColor="@color/black"
+                            android:textSize="12sp"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+            </GridLayout>
+        </LinearLayout>
+
+
+        <!--Fertilizer clickablecard-->
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#FFFFFF"
+            android:elevation="10dp"
+            android:onClick="expandFertilizer"
+            android:orientation="horizontal"
+            android:padding="10dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="10dp"
+                android:text="@string/Fertilizerapplication"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="end">
+
+
+
+                <ImageView
+                    android:id="@+id/flipArrow2"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_marginEnd="10dp"
+                    android:src="@mipmap/ic_baseline_arrow_drop_down_24" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <!--Gone Layout-->
+
+        <LinearLayout
+            android:id="@+id/details2gone"
+            android:visibility="gone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:background="#FFFFFF"
+            android:orientation="vertical"
+            >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/Typesoffertilizers"
+                android:layout_marginStart="28dp"
+                android:textSize="15dp"
+                android:layout_marginBottom="10dp"
+                />
+
+
+            <GridLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:columnCount="3"
+                android:paddingStart="28dp"
+                android:paddingEnd="28dp"
+                android:rowCount="1"
+                android:paddingBottom="28dp">
+
+                <androidx.cardview.widget.CardView
+                    android:onClick="complete"
+                    android:layout_width="wrap_content"
+                    android:layout_height="120dp"
+                    android:layout_row="0"
+                    android:layout_column="0"
+                    android:layout_columnWeight="1"
+                    android:layout_margin="5dp"
+                    app:cardCornerRadius="2dp"
+                    app:cardElevation="10dp"
+                    app:cardBackgroundColor="#A2C8B5">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal|center_vertical"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:layout_width="80dp"
+                            android:layout_height="80dp"
+                            android:src="@mipmap/fertilizericon">
+
+                        </ImageView>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="15-15-15"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/seedlingsText"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:onClick="urea"
+                    android:layout_width="wrap_content"
+                    android:layout_height="120dp"
+                    android:layout_row="0"
+                    android:layout_column="1"
+                    android:layout_columnWeight="1"
+                    android:layout_margin="5dp"
+                    app:cardCornerRadius="2dp"
+                    app:cardElevation="10dp"
+                    app:cardBackgroundColor="#A2C8B5">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal|center_vertical"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:layout_width="80dp"
+                            android:layout_height="80dp"
+                            android:elevation="50dp"
+                            android:src="@mipmap/iconurea">
+
+                        </ImageView>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Urea"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/seedlingsText"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:onClick="potash"
+                    android:layout_width="wrap_content"
+                    android:layout_height="120dp"
+                    android:layout_row="0"
+                    android:layout_column="2"
+                    android:layout_columnWeight="1"
+                    android:layout_margin="5dp"
+                    app:cardCornerRadius="2dp"
+                    app:cardElevation="10dp"
+                    app:cardBackgroundColor="#A2C8B5">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal|center_vertical"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:layout_width="80dp"
+                            android:layout_height="80dp"
+                            android:src="@mipmap/fpotash"
+                            android:elevation="30dp">
+
+                        </ImageView>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="0-0-60"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/seedlingsText"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+            </GridLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="28dp"
+                android:layout_marginEnd="28dp"
+                android:textSize="14sp"
+                android:text="@string/Dat"/>
+
+            <HorizontalScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginStart="20dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="28dp"
+                    android:orientation="horizontal">
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="100dp"
+                        android:layout_height="300dp"
+                        app:cardElevation="50dp"
+                        app:cardBackgroundColor="#794E21"
+                        android:layout_marginEnd="8dp"
+                        app:cardCornerRadius="6dp">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <ImageView
+                                android:id="@+id/image1"
+                                android:layout_width="match_parent"
+                                android:layout_height="150dp"
+                                android:scaleType="centerCrop"
+                                android:src="@mipmap/seedling1" />
+
+                            <TextView
+                                android:id="@+id/h1"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/image1"
+                                android:layout_marginTop="10dp"
+                                android:text="15 DAS"
+                                android:textAlignment="center"
+                                android:textColor="@color/white"
+                                android:textSize="20sp"
+                                android:textStyle="bold" />
+
+                            <ImageView
+                                android:id="@+id/img1"
+                                android:layout_width="50dp"
+                                android:layout_height="50dp"
+                                android:layout_below="@+id/h1"
+                                android:src="@mipmap/fertilizericon" />
+
+                            <TextView
+                                android:id="@+id/text1"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/h1"
+                                android:layout_marginTop="18dp"
+                                android:layout_toRightOf="@+id/img1"
+                                android:text="5 g"
+                                android:textColor="@color/white"
+                                android:textStyle="bold" />
+
+
+                        </RelativeLayout>
+
+
+
+                    </androidx.cardview.widget.CardView>
+
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="100dp"
+                        android:layout_height="300dp"
+                        app:cardElevation="50dp"
+                        app:cardBackgroundColor="#794E21"
+                        android:layout_marginEnd="8dp"
+                        app:cardCornerRadius="6dp">
+
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <ImageView
+                                android:id="@+id/image2"
+                                android:layout_width="match_parent"
+                                android:layout_height="150dp"
+                                android:scaleType="centerCrop"
+                                android:src="@mipmap/seedling2" />
+
+                            <TextView
+                                android:id="@+id/h2"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/image2"
+                                android:layout_marginTop="10dp"
+                                android:text="30 DAS"
+                                android:textAlignment="center"
+                                android:textColor="@color/white"
+                                android:textSize="20sp"
+                                android:textStyle="bold" />
+
+                            <ImageView
+                                android:id="@+id/img2"
+                                android:layout_width="50dp"
+                                android:layout_height="50dp"
+                                android:layout_below="@+id/h2"
+                                android:src="@mipmap/fertilizericon" />
+
+                            <ImageView
+                                android:layout_width="45dp"
+                                android:layout_height="45dp"
+                                android:layout_below="@id/img2"
+                                android:layout_marginStart="4dp"
+                                android:src="@mipmap/iconurea" />
+
+                            <TextView
+                                android:id="@+id/text2"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/h2"
+                                android:layout_marginTop="18dp"
+                                android:layout_toRightOf="@+id/img2"
+                                android:text="5 g"
+                                android:textColor="@color/white"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/text2"
+                                android:layout_marginTop="32dp"
+                                android:layout_toRightOf="@+id/img2"
+                                android:textStyle="bold"
+                                android:textColor="@color/white"
+                                android:text="2.5 g" />
+
+
+                        </RelativeLayout>
+
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="100dp"
+                        android:layout_height="300dp"
+                        app:cardElevation="50dp"
+                        app:cardBackgroundColor="#794E21"
+                        android:layout_marginEnd="8dp"
+                        app:cardCornerRadius="6dp">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <ImageView
+                                android:id="@+id/image3"
+                                android:layout_width="match_parent"
+                                android:layout_height="150dp"
+                                android:scaleType="centerCrop"
+                                android:src="@mipmap/seedling3" />
+
+                            <TextView
+                                android:id="@+id/h3"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/image3"
+                                android:layout_marginTop="10dp"
+                                android:text="45 DAS"
+                                android:textAlignment="center"
+                                android:textColor="@color/white"
+                                android:textSize="20sp"
+                                android:textStyle="bold" />
+
+                            <ImageView
+                                android:id="@+id/img3"
+                                android:layout_width="45dp"
+                                android:layout_height="45dp"
+                                android:layout_below="@+id/h3"
+                                android:layout_marginStart="4dp"
+                                android:src="@mipmap/fertilizericon" />
+
+                            <ImageView
+                                android:layout_width="45dp"
+                                android:layout_height="45dp"
+                                android:layout_below="@id/img3"
+                                android:layout_marginStart="4dp"
+                                android:src="@mipmap/fpotash" />
+
+                            <TextView
+                                android:id="@+id/text3"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/h3"
+                                android:layout_marginTop="18dp"
+                                android:layout_toRightOf="@+id/img3"
+                                android:text="5 g"
+                                android:textColor="@color/white"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/text3"
+                                android:layout_marginTop="32dp"
+                                android:layout_toRightOf="@+id/img3"
+                                android:textStyle="bold"
+                                android:textColor="@color/white"
+                                android:text="2.5 g" />
+
+
+                        </RelativeLayout>
+
+                    </androidx.cardview.widget.CardView>
+
+                </LinearLayout>
+
+            </HorizontalScrollView>
+        </LinearLayout>
+
+        <!--  Divider  -->
+
+
+        <!--Clickable Integrated Pest Management-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#FFFFFF"
+            android:onClick="expandPest"
+            android:elevation="10dp"
+            android:orientation="horizontal"
+            android:padding="10dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="10dp"
+                android:text="@string/Stickytraps"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="end">
+
+                <ImageView
+                    android:id="@+id/flipArrow3"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_marginEnd="10dp"
+                    android:src="@mipmap/ic_baseline_arrow_drop_down_24" />
+            </LinearLayout>
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/details3gone"
+            android:visibility="gone"
+            android:background="@color/white"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/Stickytraps"
+                android:textStyle="bold"
+                android:layout_marginTop="6dp"
+                android:layout_marginStart="28dp"
+                android:layout_marginEnd="28dp"
+                android:textSize="15sp"/>
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="250dp"
+                android:src="@mipmap/stickytraps"
+                android:scaleType="centerCrop"
+                android:layout_marginTop="10dp"
+                android:layout_marginStart="28dp"
+                android:layout_marginEnd="28dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/Usestickytraps"
+                android:layout_marginTop="6dp"
+                android:layout_marginStart="28dp"
+                android:layout_marginEnd="28dp"
+                android:layout_marginBottom="90dp"
+                android:textSize="15sp"/>
+        </LinearLayout>
+
+        <!--  Time Growth  -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#FFFFFF"
+            android:onClick="expandTime"
+            android:elevation="10dp"
+            android:orientation="horizontal"
+            android:padding="10dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="10dp"
+                android:text="Growth Time"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="end">
+
+                <ImageView
+                    android:id="@+id/flipArrow4"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_marginEnd="10dp"
+                    android:src="@mipmap/ic_baseline_arrow_drop_down_24" />
+            </LinearLayout>
+        </LinearLayout>
+        <!--Gone Layout-->
+
+
+        <LinearLayout
+            android:visibility="gone"
+            android:id="@+id/details4gone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:paddingBottom="100dp"
+            android:background="#FFFFFF"
+            android:orientation="vertical"
+            >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Check Temperature"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:layout_marginTop="6dp"
+                android:layout_marginStart="28dp"
+                android:layout_marginEnd="28dp"
+                android:textSize="27sp"/>
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="250dp"
+                android:src="@mipmap/sweetcornpredate"
+                android:scaleType="centerCrop"
+                android:layout_marginTop="10dp"
+                android:layout_marginStart="28dp"
+                android:layout_marginEnd="28dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Plant sweet corn two weeks after the last frost date."
+                android:textStyle="italic"
+                android:textColor="@color/black"
+                android:layout_marginTop="6dp"
+                android:layout_marginStart="28dp"
+                android:layout_marginEnd="28dp"
+                android:textSize="12sp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Because sweet corn is so sensitive to frosts, it’s best to plant it when the danger of severe frosts has passed. Look up the frost dates in your area and plant corn at least two weeks after the last frost of the season is expected to happen."
+                android:textColor="@color/black"
+                android:layout_marginTop="6dp"
+                android:layout_marginStart="28dp"
+                android:layout_marginEnd="28dp"
+                android:textSize="12sp"/>
+
+            <!-- -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Variation"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:layout_marginTop="6dp"
+                android:layout_marginStart="28dp"
+                android:layout_marginEnd="28dp"
+                android:textSize="27sp"/>
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="250dp"
+                android:src="@mipmap/sweetcornprevar"
+                android:scaleType="centerCrop"
+                android:layout_marginTop="10dp"
+                android:layout_marginStart="28dp"
+                android:layout_marginEnd="28dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Choose the variety of sweet corn you want to grow."
+                android:textStyle="italic"
+                android:textColor="@color/black"
+                android:layout_marginTop="6dp"
+                android:layout_marginStart="28dp"
+                android:layout_marginEnd="28dp"
+                android:textSize="12sp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="There are many kinds of sweet and super sweet corn, all of which mature at different rates. In general, if you live in a cooler climate, it's best to plant corn varieties that are early bloomers."
+                android:textColor="@color/black"
+                android:layout_marginTop="6dp"
+                android:layout_marginStart="28dp"
+                android:layout_marginEnd="28dp"
+                android:textSize="12sp"/>
+
+            <!-- -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Area to plant"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:layout_marginTop="6dp"
+                android:layout_marginStart="28dp"
+                android:layout_marginEnd="28dp"
+                android:textSize="27sp"/>
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="250dp"
+                android:src="@mipmap/sweetcornprearea"
+                android:scaleType="centerCrop"
+                android:layout_marginTop="10dp"
+                android:layout_marginStart="28dp"
+                android:layout_marginEnd="28dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Identify the best rectangular area for planting the corn."
+                android:textStyle="italic"
+                android:textColor="@color/black"
+                android:layout_marginTop="6dp"
+                android:layout_marginStart="28dp"
+                android:layout_marginEnd="28dp"
+                android:textSize="12sp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Corn is a wind-pollinated plant, meaning that the wind blows the pollen from one plant onto another. For this reason, it’s important to plant corn in a block formation rather than long rows, because then the pollen can more easily blow onto the other stalks."
+                android:textColor="@color/black"
+                android:layout_marginTop="6dp"
+                android:layout_marginStart="28dp"
+                android:layout_marginEnd="28dp"
+                android:textSize="12sp"/>
+
+            <!-- -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Clear Weeds"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:layout_marginTop="6dp"
+                android:layout_marginStart="28dp"
+                android:layout_marginEnd="28dp"
+                android:textSize="27sp"/>
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="250dp"
+                android:src="@mipmap/sweetcornpresoil"
+                android:scaleType="centerCrop"
+                android:layout_marginTop="10dp"
+                android:layout_marginStart="28dp"
+                android:layout_marginEnd="28dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Clear the soil of weeds."
+                android:textStyle="italic"
+                android:textColor="@color/black"
+                android:layout_marginTop="6dp"
+                android:layout_marginStart="28dp"
+                android:layout_marginEnd="28dp"
+                android:textSize="12sp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Before you begin sowing the corn seeds, you should clear the square or rectangular area where you're planting the corn of weeds. Weeds can get in the way of the growth of seedlings, and they also sap the soil of the nutrients that delicate young plants need to grow."
+                android:textColor="@color/black"
+                android:layout_marginTop="6dp"
+                android:layout_marginStart="28dp"
+                android:layout_marginEnd="28dp"
+                android:textSize="12sp"/>
+
+            <!-- -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Compost Soil"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:layout_marginTop="6dp"
+                android:layout_marginStart="28dp"
+                android:layout_marginEnd="28dp"
+                android:textSize="27sp"/>
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="250dp"
+                android:src="@mipmap/sweetcornprecompost"
+                android:scaleType="centerCrop"
+                android:layout_marginTop="10dp"
+                android:layout_marginStart="28dp"
+                android:layout_marginEnd="28dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Add compost to the soil."
+                android:textStyle="italic"
+                android:textColor="@color/black"
+                android:layout_marginTop="6dp"
+                android:layout_marginStart="28dp"
+                android:layout_marginEnd="28dp"
+                android:textSize="12sp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Before you plant the sweet corn, spread compost over the entire planting area in a layer that is 2-4 inches (5-10 cm) deep. Compost provides nitrogen and other soil nutrients, and also helps the soil to retain moisture."
+                android:textColor="@color/black"
+                android:layout_marginTop="6dp"
+                android:layout_marginStart="28dp"
+                android:layout_marginEnd="28dp"
+                android:textSize="12sp"/>
+
+            <!-- -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Fertilize Soil"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:layout_marginTop="6dp"
+                android:layout_marginStart="28dp"
+                android:layout_marginEnd="28dp"
+                android:textSize="27sp"/>
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="250dp"
+                android:src="@mipmap/sweetcornprefert"
+                android:scaleType="centerCrop"
+                android:layout_marginTop="10dp"
+                android:layout_marginStart="28dp"
+                android:layout_marginEnd="28dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Use a 10-10-10 fertilizer on the soil."
+                android:textStyle="italic"
+                android:textColor="@color/black"
+                android:layout_marginTop="6dp"
+                android:layout_marginStart="28dp"
+                android:layout_marginEnd="28dp"
+                android:textSize="12sp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="After you lay down the compost, spread a layer of 10-10-10 fertilizer over the mulch, using about 1 cup (236 ml) for every 10 square feet (3 square meters) of corn you are planting."
+                android:textColor="@color/black"
+                android:layout_marginTop="6dp"
+                android:layout_marginStart="28dp"
+                android:layout_marginEnd="28dp"
+                android:textSize="12sp"/>
+
+            <!-- -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Plant Seeds"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:layout_marginTop="6dp"
+                android:layout_marginStart="28dp"
+                android:layout_marginEnd="28dp"
+                android:textSize="27sp"/>
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="250dp"
+                android:src="@mipmap/sweetcornpreplanting"
+                android:scaleType="centerCrop"
+                android:layout_marginTop="10dp"
+                android:layout_marginStart="28dp"
+                android:layout_marginEnd="28dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Plant the seeds one and a half inches deep in the soil."
+                android:textStyle="italic"
+                android:textColor="@color/black"
+                android:layout_marginTop="6dp"
+                android:layout_marginStart="28dp"
+                android:layout_marginEnd="28dp"
+                android:textSize="12sp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="After you have cleared the area where you are planting the corn, you can begin sowing the seeds. Plant the corn seeds in the soil in at least four rows that are four feet (1.2 m) long, putting the seeds 1 ½ inches (3.8 cm) deep into the soil. Plant each seed about 9-12 inches (22.8- 30.4 cm) apart from one another."
+                android:textColor="@color/black"
+                android:layout_marginTop="6dp"
+                android:layout_marginStart="28dp"
+                android:layout_marginEnd="28dp"
+                android:textSize="12sp"/>
+
+            <!-- -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Water seeds"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:layout_marginTop="6dp"
+                android:layout_marginStart="28dp"
+                android:layout_marginEnd="28dp"
+                android:textSize="27sp"/>
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="250dp"
+                android:src="@mipmap/sweetcornprewater"
+                android:scaleType="centerCrop"
+                android:layout_marginTop="10dp"
+                android:layout_marginStart="28dp"
+                android:layout_marginEnd="28dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Water the seeds generously."
+                android:textStyle="italic"
+                android:textColor="@color/black"
+                android:layout_marginTop="6dp"
+                android:layout_marginStart="28dp"
+                android:layout_marginEnd="28dp"
+                android:textSize="12sp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Directly after you finish planting, generously water the soil until it is rich and dark. Watering the seeds right after you plant them is vital to the corn’s ability to grow and flourish."
+                android:textColor="@color/black"
+                android:layout_marginTop="6dp"
+                android:layout_marginStart="28dp"
+                android:layout_marginEnd="28dp"
+                android:textSize="12sp"/>
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="-----------------"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:layout_marginTop="6dp"
+                android:layout_marginStart="28dp"
+                android:layout_marginEnd="28dp"
+                android:textSize="27sp"/>
+
+
+            <!-- -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Water Seeds (2)"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:layout_marginTop="6dp"
+                android:layout_marginStart="28dp"
+                android:layout_marginEnd="28dp"
+                android:textSize="27sp"/>
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="250dp"
+                android:src="@mipmap/sweetcornprocwater"
+                android:scaleType="centerCrop"
+                android:layout_marginTop="10dp"
+                android:layout_marginStart="28dp"
+                android:layout_marginEnd="28dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Water corn a few days after planting."
+                android:textStyle="italic"
+                android:textColor="@color/black"
+                android:layout_marginTop="6dp"
+                android:layout_marginStart="28dp"
+                android:layout_marginEnd="28dp"
+                android:textSize="12sp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="It’s important to keep your corn properly hydrated when it is first growing. If three or four days after planting there has not been any rain, be sure to water your corn."
+                android:textColor="@color/black"
+                android:layout_marginTop="6dp"
+                android:layout_marginStart="28dp"
+                android:layout_marginEnd="28dp"
+                android:textSize="12sp"/>
+
+            <!-- -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Regular Soaking"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:layout_marginTop="6dp"
+                android:layout_marginStart="28dp"
+                android:layout_marginEnd="28dp"
+                android:textSize="27sp"/>
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="250dp"
+                android:src="@mipmap/sweetcornprocwatercons"
+                android:scaleType="centerCrop"
+                android:layout_marginTop="10dp"
+                android:layout_marginStart="28dp"
+                android:layout_marginEnd="28dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Water consistently if you live in a dry area."
+                android:textStyle="italic"
+                android:textColor="@color/black"
+                android:layout_marginTop="6dp"
+                android:layout_marginStart="28dp"
+                android:layout_marginEnd="28dp"
+                android:textSize="12sp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Sweet corn requires about 1 inch (2.5 cm) of water per week as it is starting to grow, so you may need to water your plants if you live in a dry area where you don’t get a lot of rain. To water your corn, use a soaker hose and spray the water as close to the surface of the soil as you can."
+                android:textColor="@color/black"
+                android:layout_marginTop="6dp"
+                android:layout_marginStart="28dp"
+                android:layout_marginEnd="28dp"
+                android:textSize="12sp"/>
+
+            <!-- -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Clear Weeds"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:layout_marginTop="6dp"
+                android:layout_marginStart="28dp"
+                android:layout_marginEnd="28dp"
+                android:textSize="27sp"/>
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="250dp"
+                android:src="@mipmap/sweetcornprocweeds"
+                android:scaleType="centerCrop"
+                android:layout_marginTop="10dp"
+                android:layout_marginStart="28dp"
+                android:layout_marginEnd="28dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Remove weeds from the soil regularly."
+                android:textStyle="italic"
+                android:textColor="@color/black"
+                android:layout_marginTop="6dp"
+                android:layout_marginStart="28dp"
+                android:layout_marginEnd="28dp"
+                android:textSize="12sp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Whenever you notice new weeds emerging, pull them up by the roots to clear the area. Weeds drain the soil of the nutrients that corn needs to grow. Be careful as you weed to not pull up the shallow roots of the corn plants."
+                android:textColor="@color/black"
+                android:layout_marginTop="6dp"
+                android:layout_marginStart="28dp"
+                android:layout_marginEnd="28dp"
+                android:textSize="12sp"/>
+
+            <!-- -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Fertilization"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:layout_marginTop="6dp"
+                android:layout_marginStart="28dp"
+                android:layout_marginEnd="28dp"
+                android:textSize="27sp"/>
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="250dp"
+                android:src="@mipmap/sweetcornprocfert"
+                android:scaleType="centerCrop"
+                android:layout_marginTop="10dp"
+                android:layout_marginStart="28dp"
+                android:layout_marginEnd="28dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Use 10-10-10 fertilizer six weeks after planting."
+                android:textStyle="italic"
+                android:textColor="@color/black"
+                android:layout_marginTop="6dp"
+                android:layout_marginStart="28dp"
+                android:layout_marginEnd="28dp"
+                android:textSize="12sp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="After six weeks, the corn should be steadily growing at around 1 ½ feet (45.7 cm) tall, and should have started sprouting tassels. At this point, spread another layer of 10-10-10 fertilizer around the plants, using 1 cup (236 ml) for every 10 feet (3 m) of corn row."
+                android:textColor="@color/black"
+                android:layout_marginTop="6dp"
+                android:layout_marginStart="28dp"
+                android:layout_marginEnd="28dp"
+                android:textSize="12sp"/>
+
+
+            <!-- -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Treatment"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:layout_marginTop="6dp"
+                android:layout_marginStart="28dp"
+                android:layout_marginEnd="28dp"
+                android:textSize="27sp"/>
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="250dp"
+                android:src="@mipmap/sweetcornprocpest"
+                android:scaleType="centerCrop"
+                android:layout_marginTop="10dp"
+                android:layout_marginStart="28dp"
+                android:layout_marginEnd="28dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Treat corn silks with an anti-pest solution."
+                android:textStyle="italic"
+                android:textColor="@color/black"
+                android:layout_marginTop="6dp"
+                android:layout_marginStart="28dp"
+                android:layout_marginEnd="28dp"
+                android:textSize="12sp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Corn is especially susceptible to corn earworms, which develop when earworm moths lay eggs on newly developing corn silks. To prevent these pests from growing in the silks and eating the ears of corn, spray the corn husks every few weeks with a solution made of equal parts vegetable oil and water, with a few drops dishwashing liquid added in."
+                android:textColor="@color/black"
+                android:layout_marginTop="6dp"
+                android:layout_marginStart="28dp"
+                android:layout_marginEnd="28dp"
+                android:textSize="12sp"/>
+
+            <!-- -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Protect"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:layout_marginTop="6dp"
+                android:layout_marginStart="28dp"
+                android:layout_marginEnd="28dp"
+                android:textSize="27sp"/>
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="250dp"
+                android:src="@mipmap/sweetcornprocprot"
+                android:scaleType="centerCrop"
+                android:layout_marginTop="10dp"
+                android:layout_marginStart="28dp"
+                android:layout_marginEnd="28dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Protect your corn from animals."
+                android:textStyle="italic"
+                android:textColor="@color/black"
+                android:layout_marginTop="6dp"
+                android:layout_marginStart="28dp"
+                android:layout_marginEnd="28dp"
+                android:textSize="12sp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Small animals like squirrels, birds and raccoons can also eat your corn. Avoid attracting these animals by clearing out old cornstalks or other decaying plant matter from the garden."
+                android:textColor="@color/black"
+                android:layout_marginTop="6dp"
+                android:layout_marginStart="28dp"
+                android:layout_marginEnd="28dp"
+                android:textSize="12sp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="-----------------"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:layout_marginTop="6dp"
+                android:layout_marginStart="28dp"
+                android:layout_marginEnd="28dp"
+                android:textSize="27sp"/>
+
+            <!-- -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Test Ripeness"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:layout_marginTop="6dp"
+                android:layout_marginStart="28dp"
+                android:layout_marginEnd="28dp"
+                android:textSize="27sp"/>
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="250dp"
+                android:src="@mipmap/sweetcornposttest"
+                android:scaleType="centerCrop"
+                android:layout_marginTop="10dp"
+                android:layout_marginStart="28dp"
+                android:layout_marginEnd="28dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Test the ears for ripeness."
+                android:textStyle="italic"
+                android:textColor="@color/black"
+                android:layout_marginTop="6dp"
+                android:layout_marginStart="28dp"
+                android:layout_marginEnd="28dp"
+                android:textSize="12sp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Keep an eye on your corn and note the day when you notice the corn silks starting to emerge from the ears. Three weeks after the day that the corn silks appear, start to test the ears for ripeness. To check if the corn is ripe, pull back part of the husk on one ear of corn and pierce a kernel of corn with your fingernail."
+                android:textColor="@color/black"
+                android:layout_marginTop="6dp"
+                android:layout_marginStart="28dp"
+                android:layout_marginEnd="28dp"
+                android:textSize="12sp"/>
+
+            <!-- -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Snap Corn"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:layout_marginTop="6dp"
+                android:layout_marginStart="28dp"
+                android:layout_marginEnd="28dp"
+                android:textSize="27sp"/>
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="250dp"
+                android:src="@mipmap/sweetcornpostsnap"
+                android:scaleType="centerCrop"
+                android:layout_marginTop="10dp"
+                android:layout_marginStart="28dp"
+                android:layout_marginEnd="28dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Snap the ear off by hand."
+                android:textStyle="italic"
+                android:textColor="@color/black"
+                android:layout_marginTop="6dp"
+                android:layout_marginStart="28dp"
+                android:layout_marginEnd="28dp"
+                android:textSize="12sp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="If you tested an ear of corn and it is ready to be picked, hold the stalk with your non-dominant hand, then use your dominant hand to quickly and firmly push down and snap the ear by its base, then twist and pull it away from the stalk. This should leave you with a full ear of unhusked corn, as well as a small amount of the rod-like base from which the corn grew."
+                android:textColor="@color/black"
+                android:layout_marginTop="6dp"
+                android:layout_marginStart="28dp"
+                android:layout_marginEnd="28dp"
+                android:textSize="12sp"/>
+
+            <!-- -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Eat Corn"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:layout_marginTop="6dp"
+                android:layout_marginStart="28dp"
+                android:layout_marginEnd="28dp"
+                android:textSize="27sp"/>
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="250dp"
+                android:src="@mipmap/sweetcornposteat"
+                android:scaleType="centerCrop"
+                android:layout_marginTop="10dp"
+                android:layout_marginStart="28dp"
+                android:layout_marginEnd="28dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Eat the corn directly after picking it."
+                android:textStyle="italic"
+                android:textColor="@color/black"
+                android:layout_marginTop="6dp"
+                android:layout_marginStart="28dp"
+                android:layout_marginEnd="28dp"
+                android:textSize="12sp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="After you pick your corn, it’s best to eat it as soon as possible. You can leave it in the refrigerator for a couple of hours or overnight, but the freshness will be diminished. To have the best tasting corn, remove the husk and silks, wash the corn, then grill it or boil it directly after picking it."
+                android:textColor="@color/black"
+                android:layout_marginTop="6dp"
+                android:layout_marginStart="28dp"
+                android:layout_marginEnd="28dp"
+                android:textSize="12sp"/>
+
+            <!-- -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Keep Checking"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:layout_marginTop="6dp"
+                android:layout_marginStart="28dp"
+                android:layout_marginEnd="28dp"
+                android:textSize="27sp"/>
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="250dp"
+                android:src="@mipmap/sweetcornpostcheck"
+                android:scaleType="centerCrop"
+                android:layout_marginTop="10dp"
+                android:layout_marginStart="28dp"
+                android:layout_marginEnd="28dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Keep checking on the corn every couple days after picking your first ripe ears."
+                android:textStyle="italic"
+                android:textColor="@color/black"
+                android:layout_marginTop="6dp"
+                android:layout_marginStart="28dp"
+                android:layout_marginEnd="28dp"
+                android:textSize="12sp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="After you have removed your first ripe ears of corn, keep checking on the plants. Each cob of the same type of corn should ripen in the same couple of months, and you don’t want to miss any fresh corn!"
+                android:textColor="@color/black"
+                android:layout_marginTop="6dp"
+                android:layout_marginStart="28dp"
+                android:layout_marginEnd="28dp"
+                android:textSize="12sp"/>
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</ScrollView>
+
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

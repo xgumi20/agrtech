@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.agrtech">
+
+    <application
+        android:allowBackup="true"
+        android:largeHeap="true"
+        android:icon="@drawable/addgri"
+        android:label="@string/app_name"
+        android:roundIcon="@drawable/addgri"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.Agrtech">
+        <activity
+            android:name=".BANANA"
+            android:exported="true" />
+        <activity
+            android:name=".SUGARCANE"
+            android:exported="true" />
+        <activity
+            android:name=".COCONUT"
+            android:exported="true" />
+        <activity
+            android:name=".SWEETCORN"
+            android:exported="true" />
+        <activity
+            android:name=".nepheliumlappaceum"
+            android:exported="true" />
+        <activity
+            android:name=".pineapple"
+            android:exported="true" />
+        <activity
+            android:name=".watermelon"
+            android:exported="true" />
+        <activity
+            android:name=".papaya"
+            android:exported="true" />
+        <activity
+            android:name=".cucumber"
+            android:exported="true" />
+        <activity
+            android:name=".melon"
+            android:exported="true" />
+        <activity
+            android:name=".Ladiesfinger"
+            android:exported="true" />
+        <activity
+            android:name=".Onion"
+            android:exported="true" />
+        <activity
+            android:name=".Chillipepper"
+            android:exported="true" />
+        <activity
+            android:name=".Squash"
+            android:exported="true" />
+        <activity
+            android:name=".Pechay"
+            android:exported="true" />
+        <activity
+            android:name=".Bittergouard"
+            android:exported="true" />
+        <activity
+            android:name=".Eggplant"
+            android:exported="true" />
+        <activity
+            android:name=".PlantPopulation"
+            android:exported="true" />
+        <activity
+            android:name=".Tomato"
+            android:exported="true" />
+        <activity
+            android:name=".SplashScreen"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".MainActivity"
+            android:exported="true" />
+
+        <meta-data
+            android:name="preloaded_fonts"
+            android:resource="@array/preloaded_fonts" />
+    </application>
+
+</manifest>
